@@ -3,6 +3,8 @@ VanillaTilt.init(document.querySelectorAll(".product__link"), {
   speed: 400,
 });
 
+new WOW().init();
+
 function start() {
   addClass();
   handleSlider();
@@ -35,11 +37,10 @@ function handleSlider() {
   const rightBnt = document.querySelector(".slider__icon-right");
   const controlItems = document.querySelectorAll(".slider__control-item");
   const sliderItemWidth = sliderItems[0].offsetWidth;
-  console.log("sliderItems[0].offsetWidth", sliderItems[0].offsetWidth);
   const sliderItemAmount = sliderItems.length;
-  console.log("sliderItemAmount", sliderItemAmount);
   var positionX = 0;
   var index = 0;
+  var time = 9000;
   leftBnt.addEventListener("click", function () {
     handleBnt(-1);
   });
@@ -53,6 +54,8 @@ function handleSlider() {
       handleRight();
     } else if (receive == -1) {
       handleLeft();
+    } else if (receive == 2) {
+      handleRight();
     }
 
     // right
@@ -104,7 +107,7 @@ function handleSlider() {
   );
 
   // auto
-  var autoSlider = setInterval(() => {
-    handleBnt(1);
-  }, 6000);
+  // var autoNext = setInterval(function () {
+  //   handleBnt(2);
+  // }, time);
 }
