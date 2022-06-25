@@ -169,7 +169,7 @@
                 <!-- content__container--activity: on -->
 
                 <!-- introduce -->
-                <div class="content__container">
+                <div class="content__container content__container--activity">
                   <h2 class="content__heading">Giới thiệu</h2>
                   <span class="content__desc">
                     Mình tên Nguyễn Văn Phương là một thanh niên yêu nước và
@@ -379,9 +379,7 @@
                 </div>
 
                 <!-- education -->
-                <div
-                  class="content__container content-education content__container--activity"
-                >
+                <div class="content__container content-education">
                   <h2 class="content__heading animate__bounce">Học vấn</h2>
                   <h3 class="content__heading-education">
                     <i
@@ -476,15 +474,20 @@
                     <div class="education-skill__wrap">
                       <div class="education-skill__card">
                         <div
-                          class="education-skill__percent wow animate__tada"
+                          class="education-skill__percent"
                           style="--color: #ff5b00; --num: 60"
                         >
-                          <div class="education-skill__dot wow"></div>
+                          <div class="education-skill__dot"></div>
                           <svg>
                             <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70" class="wow"></circle>
+                            <circle
+                              class="education-skill__circle"
+                              cx="70"
+                              cy="70"
+                              r="70"
+                            ></circle>
                           </svg>
-                          <div class="education-skill__decs wow">
+                          <div class="education-skill__decs">
                             <div class="education-skill__decs-heading">
                               <h2 class="education-skill__num">60</h2>
                               <span class="education-skill__num-percent"
@@ -497,15 +500,20 @@
                       </div>
                       <div class="education-skill__card">
                         <div
-                          class="education-skill__percent wow"
+                          class="education-skill__percent"
                           style="--color: #3ec70b; --num: 50"
                         >
-                          <div class="education-skill__dot wow"></div>
+                          <div class="education-skill__dot"></div>
                           <svg>
                             <circle cx="70" cy="70" r="70"></circle>
-                            <circle class="wow" cx="70" cy="70" r="70"></circle>
+                            <circle
+                              class="education-skill__circle"
+                              cx="70"
+                              cy="70"
+                              r="70"
+                            ></circle>
                           </svg>
-                          <div class="education-skill__decs wow">
+                          <div class="education-skill__decs">
                             <div class="education-skill__decs-heading">
                               <h2 class="education-skill__num">50</h2>
                               <span class="education-skill__num-percent"
@@ -521,12 +529,17 @@
                           class="education-skill__percent"
                           style="--color: #f7ec09; --num: 10"
                         >
-                          <div class="education-skill__dot wow"></div>
+                          <div class="education-skill__dot"></div>
                           <svg>
                             <circle cx="70" cy="70" r="70"></circle>
-                            <circle class="wow" cx="70" cy="70" r="70"></circle>
+                            <circle
+                              class="education-skill__circle"
+                              cx="70"
+                              cy="70"
+                              r="70"
+                            ></circle>
                           </svg>
-                          <div class="education-skill__decs wow">
+                          <div class="education-skill__decs">
                             <div class="education-skill__decs-heading">
                               <h2 class="education-skill__num">10</h2>
                               <span class="education-skill__num-percent"
@@ -763,7 +776,7 @@
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="./assets/wow/dist/wow.min.js"></script>
     <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>

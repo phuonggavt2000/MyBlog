@@ -3,9 +3,12 @@ VanillaTilt.init(document.querySelectorAll(".product__link"), {
   speed: 400,
 });
 
-new WOW().init();
+setTimeout(() => {
+  new WOW().init();
+}, 3000);
 
 function start() {
+  addEducationClass();
   addClass();
   handleSlider();
 }
@@ -25,7 +28,19 @@ function addClass() {
       }
       this.classList.add("sidebar-item--activity");
       listContent[indexSidebar].classList.add("content__container--activity");
+      var educationClass = listContent[indexSidebar].classList[1];
     });
+  }
+}
+
+function addEducationClass() {
+  var skillDot = document.querySelectorAll(".education-skill__dot");
+  var skillCircle = document.querySelectorAll(".education-skill__circle");
+  var skillDecs = document.querySelectorAll(".education-skill__decs");
+  for (i = 0; i < skillDot.length; i++) {
+    skillDot[i].classList.add("wow");
+    skillCircle[i].classList.add("wow");
+    skillDecs[i].classList.add("wow");
   }
 }
 
@@ -107,7 +122,7 @@ function handleSlider() {
   );
 
   // auto
-  // var autoNext = setInterval(function () {
-  //   handleBnt(2);
-  // }, time);
+  var autoNext = setInterval(function () {
+    handleBnt(2);
+  }, time);
 }
