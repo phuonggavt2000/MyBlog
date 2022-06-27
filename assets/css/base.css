@@ -24,7 +24,12 @@ html {
 }
 
 body {
-  background: radial-gradient(#47b5ff, #20a8ec, #4b7be5) no-repeat top/cover;
+  background: radial-gradient(
+      rgba(86, 187, 241, 0.9),
+      #56bbf1,
+      rgba(59, 68, 246, 0.7)
+    )
+    no-repeat top/cover;
   scroll-behavior: smooth;
   user-select: none;
   -moz-user-select: none;

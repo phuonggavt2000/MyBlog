@@ -3,17 +3,39 @@ VanillaTilt.init(document.querySelectorAll(".product__link"), {
   speed: 400,
 });
 
-setTimeout(() => {
-  new WOW().init();
-}, 3000);
-
 function start() {
   addEducationClass();
   addClass();
   handleSlider();
+  handleScroll();
 }
 
 start();
+
+function handleScroll() {
+  var content = document.querySelector(".content");
+  var nav = document.querySelector("#nav");
+  window.onscroll = () => {
+    let contentTop = content.offsetTop;
+    let scrollTop = window.scrollY || document.documentElement.offsetTop;
+    if (scrollTop > contentTop) {
+      nav.classList.add("fixed");
+    } else if (scrollTop <= contentTop - 24) {
+      nav.classList.remove("fixed");
+    }
+
+    // Show skill progress when scroll to view
+    // let skillElementToTop = this.skillElement.getBoundingClientRect().top;
+    // if (skillElementToTop < window.innerHeight) {
+    //   this.skillElement.setAttribute(
+    //     "style",
+    //     "--animation-progress: skill-progress 1s forwards"
+    //   );
+    // } else {
+    //   this.skillElement.removeAttribute("style");
+    // }
+  };
+}
 
 function addClass() {
   var listSidebar = document.querySelectorAll(".sidebar-item");
@@ -28,7 +50,16 @@ function addClass() {
       }
       this.classList.add("sidebar-item--activity");
       listContent[indexSidebar].classList.add("content__container--activity");
+      listContent[indexSidebar].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
       var educationClass = listContent[indexSidebar].classList[1];
+      if (educationClass == "content-education") {
+        setTimeout(() => {
+          new WOW().init();
+        }, 1000);
+      }
     });
   }
 }
@@ -39,7 +70,6 @@ function addEducationClass() {
   var skillDecs = document.querySelectorAll(".education-skill__decs");
   for (i = 0; i < skillDot.length; i++) {
     skillDot[i].classList.add("wow");
-    skillCircle[i].classList.add("wow");
     skillDecs[i].classList.add("wow");
   }
 }
@@ -76,7 +106,6 @@ function handleSlider() {
     // right
     function handleRight() {
       positionX = positionX - sliderItemWidth;
-      console.log("positionX", positionX);
       index = Math.abs(positionX) / sliderItemWidth;
       if (index > sliderItemAmount - 1) {
         index = 0;
