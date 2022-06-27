@@ -24,6 +24,7 @@ html {
 }
 
 body {
+  position: relative;
   background: radial-gradient(
       rgba(86, 187, 241, 0.9),
       #56bbf1,

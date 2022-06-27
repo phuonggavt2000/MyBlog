@@ -8,6 +8,9 @@ function start() {
   addClass();
   handleSlider();
   handleScroll();
+  for (i = 0; i <= 40; i++) {
+    handleSnow();
+  }
 }
 
 start();
@@ -106,6 +109,7 @@ function handleSlider() {
     // right
     function handleRight() {
       positionX = positionX - sliderItemWidth;
+      console.log("positionX", positionX);
       index = Math.abs(positionX) / sliderItemWidth;
       if (index > sliderItemAmount - 1) {
         index = 0;
@@ -154,4 +158,22 @@ function handleSlider() {
   var autoNext = setInterval(function () {
     handleBnt(2);
   }, time);
+}
+
+function handleSnow() {
+  const snowObject = {
+    second: Math.floor(Math.random() * (60 - 10) + 10),
+    scaleForm: Math.floor(Math.random() * (4 - 1) + 1),
+    scaleTo: Math.floor(Math.random() * (5 - 3) + 3),
+    snowText: "❆",
+    margin: Math.floor(Math.random() * (50 - 10) + 10),
+    bottomForm: Math.floor(Math.random() * (100 - 20) + 20),
+  };
+  let snowList = document.querySelector(".snow-list");
+  let snow = document.createElement("span");
+  snow.classList.add("snow");
+  snow.style.cssText = `--second: ${snowObject.second}; --scale-form: ${snowObject.scaleForm}; --scale-to: ${snowObject.scaleTo};--margin: ${snowObject.margin}px; --bottom-form: ${snowObject.bottomForm}vh`;
+  snow.innerText = `${snowObject.snowText}`;
+  snowList.appendChild(snow);
+  // let snow = `<span class="snow" style="--second: ${snowObject.second}; --scale-form: ${snowObject.scaleForm}; --scale-to: ${snowObject.scaleTo}">${snowObject.snowText}</span>`;
 }
