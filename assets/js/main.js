@@ -1,9 +1,10 @@
 VanillaTilt.init(document.querySelectorAll(".product__link"), {
-  max: 25,
-  speed: 400,
+  max: 6,
+  speed: 200,
 });
 
 function start() {
+  handleLoading();
   addEducationClass();
   addClass();
   handleSlider();
@@ -23,7 +24,7 @@ function handleScroll() {
     let scrollTop = window.scrollY || document.documentElement.offsetTop;
     if (scrollTop > contentTop) {
       nav.classList.add("fixed");
-    } else if (scrollTop <= contentTop - 24) {
+    } else if (scrollTop <= contentTop - 12) {
       nav.classList.remove("fixed");
     }
 
@@ -78,23 +79,25 @@ function addEducationClass() {
 }
 
 function handleSlider() {
-  const slider = document.querySelector(".slider");
-  const sliderList = document.querySelector(".slider__list");
-  const sliderItems = document.querySelectorAll(".slider__item");
-  const leftBnt = document.querySelector(".slider__icon-left");
-  const rightBnt = document.querySelector(".slider__icon-right");
-  const controlItems = document.querySelectorAll(".slider__control-item");
-  const sliderItemWidth = sliderItems[0].offsetWidth;
-  const sliderItemAmount = sliderItems.length;
+  let slider = document.querySelector(".slider");
+  let sliderList = document.querySelector(".slider__list");
+  let sliderItems = document.querySelectorAll(".slider__item");
+  let leftBnt = document.querySelector(".slider__icon-left");
+  let rightBnt = document.querySelector(".slider__icon-right");
+  let controlItems = document.querySelectorAll(".slider__control-item");
+  var sliderItemWidth = sliderItems[0].offsetWidth;
+  let sliderItemAmount = sliderItems.length;
   var positionX = 0;
   var index = 0;
   var time = 9000;
   leftBnt.addEventListener("click", function () {
     handleBnt(-1);
+    return;
   });
 
   rightBnt.addEventListener("click", function () {
     handleBnt(1);
+    return;
   });
 
   function handleBnt(receive) {
@@ -102,12 +105,11 @@ function handleSlider() {
       handleRight();
     } else if (receive == -1) {
       handleLeft();
-    } else if (receive == 2) {
-      handleRight();
     }
 
     // right
     function handleRight() {
+      var sliderItemWidth = sliderItems[0].offsetWidth;
       positionX = positionX - sliderItemWidth;
       console.log("positionX", positionX);
       index = Math.abs(positionX) / sliderItemWidth;
@@ -126,6 +128,7 @@ function handleSlider() {
 
     // left
     function handleLeft() {
+      var sliderItemWidth = sliderItems[0].offsetWidth;
       positionX = positionX + sliderItemWidth;
       index = positionX / -sliderItemWidth;
       if (index < 0) {
@@ -156,7 +159,7 @@ function handleSlider() {
 
   // auto
   var autoNext = setInterval(function () {
-    handleBnt(2);
+    handleBnt(1);
   }, time);
 }
 
@@ -176,4 +179,24 @@ function handleSnow() {
   snow.innerText = `${snowObject.snowText}`;
   snowList.appendChild(snow);
   // let snow = `<span class="snow" style="--second: ${snowObject.second}; --scale-form: ${snowObject.scaleForm}; --scale-to: ${snowObject.scaleTo}">${snowObject.snowText}</span>`;
+}
+
+// none Loading
+function handleLoading() {
+  let eleLoading = document.querySelector(".loading");
+  let transition = 500;
+  setTimeout(() => {
+    eleLoading.style.transition = ` opacity ${transition}ms linear `;
+  }, 1000);
+  window.onload = () => {
+    setTimeout(() => {
+      noneLoading();
+    }, 1000);
+  };
+  function noneLoading() {
+    eleLoading.style.opacity = 0;
+    setTimeout(() => {
+      document.body.removeChild(eleLoading);
+    }, transition);
+  }
 }

@@ -25,11 +25,7 @@ html {
 
 body {
   position: relative;
-  background: radial-gradient(
-      rgba(86, 187, 241, 0.9),
-      #56bbf1,
-      rgba(59, 68, 246, 0.7)
-    )
+  background: radial-gradient(rgba(86, 187, 241, 0.8), #56bbf1, #47b5ff)
     no-repeat top/cover;
   scroll-behavior: smooth;
   user-select: none;
