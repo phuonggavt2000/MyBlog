@@ -1070,7 +1070,6 @@
   left: 50%;
   overflow: visible !important;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   animation: animateBox 25s linear infinite alternate;
   z-index: -1;
 }

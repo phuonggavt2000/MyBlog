@@ -193,6 +193,6 @@
   }
 
   .box {
-    animation: none;
+    transform-style: unset;
   }
 }
