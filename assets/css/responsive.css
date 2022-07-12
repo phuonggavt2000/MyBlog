@@ -194,5 +194,6 @@
 
   .box {
     transform-style: unset;
+    animation: none;
   }
 }
