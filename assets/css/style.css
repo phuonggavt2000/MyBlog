@@ -859,7 +859,7 @@
   position: absolute;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
-  left: 1px;
+  left: 2px;
   top: 2px;
   border: 5px solid black;
   border-radius: 50%;
