@@ -218,7 +218,7 @@
 
 .container__sidebar {
   border-radius: 2.5rem;
-  z-index: 10;
+  z-index: 10000;
 }
 
 #nav.fixed {
@@ -1068,7 +1068,9 @@
   position: absolute;
   top: 17%;
   left: 50%;
+  overflow: visible !important;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   animation: animateBox 25s linear infinite alternate;
   z-index: -1;
 }
