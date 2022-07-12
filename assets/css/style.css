@@ -1046,7 +1046,9 @@
   bottom: var(--bottom-form);
   color: var(--while-color);
   font-size: 1.2rem;
+  -webkit-animation: snowDown 10s linear infinite;
   animation: snowDown 10s linear infinite;
+  -webkit-animation-duration: calc(600s / var(--second));
   animation-duration: calc(600s / var(--second));
   margin: var(--margin);
   z-index: 1000;
@@ -1057,10 +1059,12 @@
 @keyframes snowDown {
   form {
     bottom: var(--bottom-form);
+    -webkit-transform: scale(var(--scale-form)) rotate(0);
     transform: scale(var(--scale-form)) rotate(0);
   }
   to {
     bottom: -100vh;
+    -webkit-transform: scale(var(--scale-to)) rotate(360deg);
     transform: scale(var(--scale-to)) rotate(360deg);
   }
 }
