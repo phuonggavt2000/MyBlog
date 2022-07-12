@@ -602,6 +602,7 @@
   background: linear-gradient(40deg, #d4d925, #ca82ff) no-repeat top/cover;
   display: flex;
   align-items: center;
+  border-radius: 5rem;
   flex-wrap: wrap;
   padding: 40px;
   flex-shrink: 0;
