@@ -803,8 +803,10 @@
 
 .education-skill__dot {
   position: absolute;
-  inset: 2px;
+  height: 96%;
+  width: 100%;
   z-index: 10;
+  -webkit-transform: rotate(calc(3.6deg * var(--num)));
   transform: rotate(calc(3.6deg * var(--num)));
   animation: animateDot 2s linear forwards;
 }
@@ -823,6 +825,7 @@
   position: absolute;
   top: -3px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   content: "";
   width: 12px;
