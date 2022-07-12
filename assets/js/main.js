@@ -109,10 +109,9 @@ function handleSlider() {
 
     // right
     function handleRight() {
-      var sliderItemWidth = sliderItems[0].offsetWidth;
+      var sliderItemWidth = sliderItems[1].offsetWidth;
       var controlItems = document.querySelectorAll(".slider__control-item");
       positionX = positionX - sliderItemWidth;
-      console.log("positionX", positionX);
       index = Math.abs(positionX) / sliderItemWidth;
       if (index > sliderItemAmount - 1) {
         index = 0;
@@ -120,7 +119,11 @@ function handleSlider() {
       [...controlItems].forEach((ele) =>
         ele.classList.remove("slider__control-item--active")
       );
-      controlItems[index].classList.add("slider__control-item--active");
+      if (controlItems[index] == undefined) {
+        controlItems[0].classList.add("slider__control-item--active");
+      } else {
+        controlItems[index].classList.add("slider__control-item--active");
+      }
       if (positionX <= -sliderItemAmount * sliderItemWidth) {
         positionX = 0;
       }
