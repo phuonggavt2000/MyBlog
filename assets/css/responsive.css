@@ -9,11 +9,11 @@
 /* Mobile & table */
 @media (max-width: 1023px) {
   #header {
-    margin-top: 120px;
+    margin-top: 90px;
   }
 
   .box {
-    top: -60px;
+    display: none;
   }
 
   .header__contain {
@@ -29,7 +29,7 @@
   }
 
   .header__left-avt {
-    margin-top: -15%;
+    margin-top: -30%;
     margin-bottom: 5%;
     box-shadow: 0 8px 11px 2px rgb(0 29 110 / 26%);
   }
@@ -190,10 +190,5 @@
 
   .interests__img {
     margin: 0;
-  }
-
-  .box {
-    transform-style: unset;
-    animation: none;
   }
 }
