@@ -1071,9 +1071,7 @@
   overflow: visible !important;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
   animation: animateBox 25s linear infinite alternate;
-  -webkit-animation: animateBox 25s linear infinite alternate;
   z-index: -1;
 }
 

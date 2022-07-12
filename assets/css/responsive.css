@@ -191,4 +191,8 @@
   .interests__img {
     margin: 0;
   }
+
+  .box {
+    animation: none;
+  }
 }
