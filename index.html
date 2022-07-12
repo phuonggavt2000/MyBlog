@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/icon/coding.png" />
     <link
       rel="stylesheet"
       href="./assets/icon/fontawesome-free-6.1.1-web/css/all.min.css"
@@ -19,8 +22,8 @@
 
   <body>
     <div id="main">
-      <div class="grid">
-        <header id="header">
+      <div class="grid wide">
+        <header id="header" class="mx-c-2">
           <div class="header__contain">
             <div class="header__left">
               <div class="header__left-avt"></div>
@@ -34,7 +37,8 @@
                 </span>
                 <div class="header__left-social">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/nvp192000/"
+                    target="_blank"
                     style="color: #3b5998"
                     class="header__left-social-icon header__left-social-icon-fb"
                   >
@@ -46,7 +50,8 @@
                     </h3>
                   </a>
                   <a
-                    href="#"
+                    href="https://zalo.me/0923193656"
+                    target="_blank"
                     class="header__left-social-icon header__left-social-icon-zalo"
                   >
                     <div class="header__left-zalo"></div>
@@ -57,7 +62,8 @@
                     </h3>
                   </a>
                   <a
-                    href="#"
+                    href="https://vt.tiktok.com/ZSdKnftFH/"
+                    target="_blank"
                     style="color: #21094e"
                     class="header__left-social-icon header__left-social-icon-tiktok"
                   >
@@ -69,7 +75,8 @@
                     </h3>
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/phuonggavt2000"
+                    target="_blank"
                     class="header__left-social-icon header__left-social-icon-githup"
                     style="color: var(--black-color)"
                   >
@@ -85,7 +92,7 @@
             </div>
 
             <div class="header__right">
-              <div class="row">
+              <div class="header__right-info">
                 <div class="header__right-contact">
                   <h3 class="header__right-name">EMAIL</h3>
                   <span class="header__right-desc">
@@ -98,7 +105,7 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="header__right-info">
                 <div class="header__right-contact">
                   <h3 class="header__right-name">SỐ ĐIỆN THOẠI</h3>
                   <span class="header__right-desc">0923193xxx</span>
@@ -111,636 +118,653 @@
             </div>
           </div>
         </header>
+      </div>
 
-        <div id="container">
-          <div class="grid__row">
-            <div class="grid__col-2">
-              <div id="nav" class="container__sidebar">
-                <!-- activity: sidebar-item--activity-->
-                <ul class="sidebar">
-                  <li class="sidebar-item" href="#1" data-index="0">
-                    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-                    <lord-icon
-                      src="https://cdn.lordicon.com/dxjqoygy.json"
-                      trigger="morph"
-                      colors="primary:#121331,secondary:#08a88a"
-                      state="hover-looking-around"
-                      style="width: 60px; height: 60px"
+      <div class="grid wide">
+        <div class="row no-gutter">
+          <div class="col l-2 m-12 c-12 mb-s-2">
+            <div id="nav" class="container__sidebar container__sidebar-mobile">
+              <!-- activity: sidebar-item--activity-->
+              <ul class="sidebar">
+                <li class="sidebar-item" href="#1" data-index="0">
+                  <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/dxjqoygy.json"
+                    trigger="morph"
+                    colors="primary:#121331,secondary:#08a88a"
+                    state="hover-looking-around"
+                    style="width: 60px; height: 60px"
+                  >
+                  </lord-icon>
+                  <h3 class="sidebar-item__name">BẢN THÂN</h3>
+                </li>
+                <li class="sidebar-item" data-index="1">
+                  <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/wxnxiano.json"
+                    trigger="morph"
+                    style="width: 60px; height: 60px"
+                  >
+                  </lord-icon>
+                  <h3 class="sidebar-item__name">HỌC VẤN</h3>
+                </li>
+                <li class="sidebar-item" data-index="2">
+                  <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/iltqorsz.json"
+                    trigger="morph"
+                    style="width: 60px; height: 60px"
+                  >
+                  </lord-icon>
+                  <h3 class="sidebar-item__name">MỤC TIÊU</h3>
+                </li>
+                <li class="sidebar-item" data-index="3">
+                  <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/rjzlnunf.json"
+                    trigger="morph"
+                    style="width: 60px; height: 60px"
+                  >
+                  </lord-icon>
+                  <h3 class="sidebar-item__name">SỞ THÍCH</h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col l-10 m-12 c-12">
+            <div class="content">
+              <!-- content__container--activity: on -->
+
+              <!-- introduce -->
+              <div class="content__container content__container--activity">
+                <h2 class="content__heading">Giới thiệu</h2>
+                <span class="content__desc">
+                  Mình tên Nguyễn Văn Phương có kiến thức về front end, trẻ và
+                  đầy nhiệt huyết, không ngừng học hỏi những công nghệ mới. Hiện
+                  tại mình đang học online tại Codegym, F8 và Trung Tâm Tiếng
+                  Anh Hireme
+                </span>
+                <span class="content__desc">
+                  Trong quá trình tự học mình luôn gặp nhiều vấn đề khó và nó đã
+                  làm cho mình thiếu động lực để tiếp tục cố gắng, nhưng những
+                  lúc như vậy mình luôn tự hỏi, tại sao mình lại bắt đầu và đã
+                  bắt đầu rồi thì phải biết cách kết thúc nó. Câu hỏi này cho
+                  mình thêm động lực để tiếp tục trên con đường trở thành một
+                  Wed Developer.
+                </span>
+                <h3 class="content__desc-mainly">
+                  Hiện tại mình đang cần những người bạn có chung mục tiêu trở
+                  thành một Web Developer, giúp đỡ nhau giải quyết những vấn đề
+                  khó và cùng nhau phát triển, làm ra những dự án lớn trong
+                  tương lai. Bạn nào muốn có thể kết bạn
+                  <a href="#" class="content__desc-mainly-link">FACEBOOK</a>
+                  của mình.
+                </h3>
+                <h2 class="content__heading-sub">Sản phẩm của mình</h2>
+                <div class="row">
+                  <div class="col l-6 m-6 c-12">
+                    <div class="product">
+                      <a
+                        href="https://the-band-2022.netlify.app/"
+                        class="product__link"
+                        target="_blank"
+                      >
+                        <div
+                          class="product__link-img"
+                          style="
+                            background: url(/assets/img/product/Screenshot\ 2022-06-30\ 104651.png)
+                              top/cover;
+                          "
+                        ></div>
+                        <h2 class="product__link-num">01</h2>
+                        <h2
+                          class="product__link-heading"
+                          style="--product-color: white"
+                        >
+                          The Band
+                        </h2>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col l-6 m-6 c-12">
+                    <div class="product mt-c-2">
+                      <a
+                        href="https://shoppee-nvp-2000.netlify.app/"
+                        class="product__link"
+                      >
+                        <div
+                          class="product__link-img"
+                          style="
+                            background: url(/assets/img/product/Screenshot\ 2022-06-17\ 174845.png)
+                              top/cover;
+                          "
+                        ></div>
+                        <h2 class="product__link-num">02</h2>
+                        <h2
+                          class="product__link-heading"
+                          style="--product-color: #f6422e"
+                        >
+                          SHOPPEE
+                        </h2>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- slider -->
+                <div class="slider">
+                  <h2 class="content__heading-sub content__slider-heading">
+                    Những nói truyền cảm hứng
+                  </h2>
+                  <div class="slider__icon slider__icon-left">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </div>
+                  <ul class="slider__control">
+                    <li
+                      class="slider__control-item slider__control-item--active"
+                      data-index="0"
+                    ></li>
+                    <li class="slider__control-item" data-index="1"></li>
+                    <li class="slider__control-item" data-index="2"></li>
+                    <li class="slider__control-item" data-index="3"></li>
+                  </ul>
+                  <div class="slider__wrap">
+                    <ul class="slider__list">
+                      <li class="slider__item">
+                        <div
+                          class="slider__img"
+                          style="
+                            background: url(./assets/img/avt/meo.jpg) no-repeat
+                              top/cover;
+                          "
+                        ></div>
+                        <div class="slider__content">
+                          <h1 class="slider__content-heading">MR. Khanh</h1>
+                          <span class="slider__content-decs">
+                            "Trong quãng thời gian bạn cố gắng hoàn thành những
+                            mục tiêu, đôi lúc bạn cảm thấy thiếu động lực, chán
+                            nản rồi bạn sẽ dừng lại vài ngày, 1 tuần hoặc lâu
+                            hơn và điều đó sẽ dẫn đến những hậu quả trong tương
+                            lai."
+                          </span>
+                          <h2 class="slider__content-main">
+                            Bạn Chỉ Thất Khi Bạn Ngừng Cố Gắng
+                          </h2>
+                        </div>
+                      </li>
+                      <li class="slider__item">
+                        <div
+                          class="slider__img"
+                          style="
+                            background: url(/assets/img/avt/quyet.jpg) no-repeat
+                              top/cover;
+                          "
+                        ></div>
+                        <div class="slider__content">
+                          <h1 class="slider__content-heading">MR. Quyết</h1>
+                          <span class="slider__content-decs">
+                            "Khi bạn còn trẻ hãy luôn cố gắng cải thiện bản thân
+                            và biết cách lắng nghe. Không quan tâm những người
+                            xung quanh làm ít hơn mình mà hãy không ngừng học
+                            hỏi. Một ngày nào đó điều tuyệt vời sẽ đến với
+                            bạn."</span
+                          >
+                          <h2 class="slider__content-main">
+                            Hãy Luôn Cố gắng cải thiện bản thân
+                          </h2>
+                        </div>
+                      </li>
+
+                      <li class="slider__item">
+                        <div
+                          class="slider__img"
+                          style="
+                            background: url(/assets/img/avt/angela2.jpg)
+                              no-repeat top/cover;
+                          "
+                        ></div>
+                        <div class="slider__content">
+                          <h1 class="slider__content-heading">
+                            Angela Duckworth
+                          </h1>
+                          <span class="slider__content-decs">
+                            "Tài năng bẩm sinh không phải là yếu tố duy nhất
+                            quyết định sự thành bài của mỗi người. Bởi bên cạch
+                            đó, chìa khóa tạo nên thành công lại là điều mà ai
+                            cũng đều có thể xây dựng và rèn luyện: Sự bền
+                            bỉ."</span
+                          >
+                          <h2 class="slider__content-main">
+                            Nếu tài năng quan trọng thì nỗ lực quan trọng gấp
+                            đôi
+                          </h2>
+                        </div>
+                      </li>
+                      <li class="slider__item">
+                        <div
+                          class="slider__img"
+                          style="
+                            background: url(/assets/img/avt/1575827117-275-winston-churchill--vi-thu-tuong-chua-chom-cua-nuoc-anh-6-wc1-1575820163-width760height612.jpg)
+                              no-repeat top/cover;
+                          "
+                        ></div>
+                        <div class="slider__content">
+                          <h1 class="slider__content-heading">
+                            Winston Churchill
+                          </h1>
+                          <span class="slider__content-decs">
+                            "Những số phận nghiệt ngã, hoàn cảnh éo le không
+                            phải là rào cản ngăn cách con người tới với sự thành
+                            công, thành công sẽ tới với những người kiên trì và
+                            biết vượt qua khó khăn để khẳng định mình."</span
+                          >
+                          <h2 class="slider__content-main">
+                            Nếu bạn định bước qua địa ngục, hãy cứ tiếp tục
+                          </h2>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="slider__icon slider__icon-right">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- education -->
+              <div class="content__container content-education">
+                <h2 class="content__heading animate__bounce">Học vấn</h2>
+                <h3 class="content__heading-education">
+                  <i
+                    class="content-education__icon"
+                    style="
+                      background-image: url(./assets/img/icon/education.png);
+                    "
+                  ></i>
+                  Giáo dục
+                </h3>
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">
+                    Trường Đại Học Giao Thông Vận Tải Thành Phố Hồ Chí Minh
+                  </h3>
+                  <p class="content__timeline-date">2018</p>
+                  <span class="content__timeline-decs">
+                    Sau khi tốt nghiệp cấp 3, mình theo học tại Trường Đại Học
+                    Giao Thông Vận Tải Thành Phố Hồ Chí Minh.
+                  </span>
+                </div>
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">Tổ Quốc Gọi Tên</h3>
+                  <p class="content__timeline-date">2020</p>
+                  <span class="content__timeline-decs">
+                    Bảo lưu học tập và lên đường nhập ngũ. Trong quá trình thực
+                    hiện nghĩa vụ quân sự mình đã trải quá trình rèn luyện rất
+                    khắc nghiệt. Điều đó đã giúp cho mình trở thành con người
+                    mạnh mẽ hơn, có thể đối mặt với những khó khắn và áp lực
+                    trong cuộc sống.
+                  </span>
+                </div>
+                <div class="content__timeline border-none">
+                  <h3 class="content__timeline-heading">
+                    Đăng kí học lập trình Online và Tiếng Anh
+                  </h3>
+                  <p class="content__timeline-date">2022</p>
+                  <span class="content__timeline-decs">
+                    Sau khi hoàn thành nghĩa vụ quân sự, mình đăng kí khóa học
+                    online tại Codegym, trong quá trình tự học thì mình có học
+                    thì mình có học tập thêm tại F8, W3schools, MDN. Vì mình
+                    biết nếu lập trình mà không có Tiếng Anh thì sẽ không thể
+                    tiến xa được nên mình quyết định đăng kí học thêm Tiếng Anh
+                    HIREME tại Vũng Tàu.
+                  </span>
+                </div>
+
+                <h3 class="content__heading-education">
+                  <i
+                    class="content-education__icon"
+                    style="background-image: url(./assets/img/icon/exp.png)"
+                  ></i>
+                  Kiến thức
+                </h3>
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">HTML</h3>
+                  <p class="content__timeline-date">
+                    HyperText Markup Language
+                  </p>
+                  <span class="content__timeline-decs">
+                    HTML được dịch là "Ngôn ngữ đánh dấu siêu văn bản", nó được
+                    dùng để tạo ra các tài liệu hiện thị được trên trình duyệt.
+                    HTML gọi là ngôn ngữ nhưng nó không giống như các ngôn ngữ
+                    kịch bản hay ngôn ngữ lập trình (sử dụng các kịch bản để thi
+                    hành các tác vụ), ngôn ngữ đánh dấu HTML lại sử dụng các thẻ
+                    để xác định nội dung của trang.
+                  </span>
+                </div>
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">CSS</h3>
+                  <p class="content__timeline-date">Cascading Style Sheets</p>
+                  <span class="content__timeline-decs">
+                    CSS là một ngôn ngữ được sử dụng để tìm và định dạng lại các
+                    phần tử được tạo ra bởi ngôn ngữ đánh dấu (HTML). Nói ngắn
+                    gọn hơn là ngôn ngữ tạo phong cách cho trang web.
+                  </span>
+                </div>
+                <div class="content__timeline border-none">
+                  <h3 class="content__timeline-heading">JS</h3>
+                  <p class="content__timeline-date">JavaScript</p>
+                  <span class="content__timeline-decs">
+                    Javascript là một ngôn ngữ lập trình kịch bản được sử dụng
+                    rộng rãi trong các ứng dụng Website và được hỗ trợ hầu như
+                    trên tất cả các trình duyệt trên cả máy tính lẫn điện thoại.
+                    Nhiệm vụ của Javascript là xử lý những đối tượng HTML trên
+                    trình duyệt. Nó có thể can thiệp với các hành động như thêm
+                    / xóa / sửa các thuộc tính CSS và các thẻ HTML một cách dễ
+                    dàng.
+                  </span>
+                </div>
+                <div class="education-skill">
+                  <div class="education-skill__wrap">
+                    <div class="education-skill__card">
+                      <div
+                        class="education-skill__percent"
+                        style="--color: #ff5b00; --num: 50"
+                      >
+                        <div class="education-skill__dot"></div>
+                        <div class="ducation-skill__circle wow"></div>
+                        <svg>
+                          <circle cx="70" cy="70" r="70"></circle>
+                          <circle class="" cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="education-skill__decs">
+                          <div class="education-skill__decs-heading">
+                            <h2 class="education-skill__num">50</h2>
+                            <span class="education-skill__num-percent">%</span>
+                          </div>
+                          <span class="education-skill__name">HTML</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="education-skill__card">
+                      <div
+                        class="education-skill__percent"
+                        style="--color: #3ec70b; --num: 30"
+                      >
+                        <div class="education-skill__dot"></div>
+                        <div class="ducation-skill__circle wow"></div>
+                        <svg>
+                          <circle cx="70" cy="70" r="70"></circle>
+                          <circle class="" cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="education-skill__decs">
+                          <div class="education-skill__decs-heading">
+                            <h2 class="education-skill__num">30</h2>
+                            <span class="education-skill__num-percent">%</span>
+                          </div>
+                          <span class="education-skill__name">CSS</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="education-skill__card">
+                      <div
+                        class="education-skill__percent"
+                        style="--color: #f7ec09; --num: 10"
+                      >
+                        <div class="education-skill__dot"></div>
+                        <div class="ducation-skill__circle wow"></div>
+                        <svg>
+                          <circle cx="70" cy="70" r="70"></circle>
+                          <circle class="" cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="education-skill__decs">
+                          <div class="education-skill__decs-heading">
+                            <h2 class="education-skill__num">10</h2>
+                            <span class="education-skill__num-percent">%</span>
+                          </div>
+                          <span class="education-skill__name">JAVASCRIPT</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Goal -->
+              <div class="content__container content__container-goal">
+                <h2 class="content__heading">Mục Tiêu</h2>
+                <h3 class="content__heading-sub content__heading-sub-goal">
+                  Ngắn Hạn
+                </h3>
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">
+                    Hoàn thành Javascript và Ngữ pháp Tiếng Anh căn bản
+                  </h3>
+                  <p class="content__timeline-date">04 - 05/2022</p>
+                  <span class="content__timeline-decs">
+                    Làm một số sản phẩm về sử dụng Javascript cơ bản, Học từ
+                    vựng, ngữ pháp và luyện nghe part 1, 2 TOEIC
+                  </span>
+                </div>
+
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">
+                    Hoàn thành HTML và CSS. Học sâu hơn về ngữ pháp Tiếng Anh
+                  </h3>
+                  <p class="content__timeline-date">06 - 07/2022</p>
+                  <span class="content__timeline-decs">
+                    Làm một số trang web tĩnh và blog cá nhân. Học từ vựng, ngữ
+                    pháp và luyện nghe part 3, 4 TOEIC
+                  </span>
+                </div>
+
+                <div class="content__timeline">
+                  <h3 class="content__timeline-heading">
+                    Hoàn thành Javascript nâng cao và ReactJS. Học sâu hơn về
+                    ngữ pháp Tiếng Anh
+                  </h3>
+                  <p class="content__timeline-date">08 - 10/2022</p>
+                  <span class="content__timeline-decs">
+                    Làm trang Web như Tiktok và một vài trang Web có thể tương
+                    tác. Học từ vựng, ngữ pháp và luyện nghe part 1, 2, 3, 4
+                    TOEIC
+                  </span>
+                </div>
+
+                <div class="content__timeline content__timeline-end">
+                  <h3 class="content__timeline-heading">
+                    Làm dự án. Luyện giải đề Toeic.
+                  </h3>
+                  <p class="content__timeline-date">11 - 12/2022</p>
+                  <span class="content__timeline-decs">
+                    Áp dụng những kiến thức đã học và làm ra một vài dự án. Tổng
+                    hợp những kiến thức Tiếng Anh và thi TOEIC
+                  </span>
+                </div>
+
+                <h3 class="content__heading-knowledge">
+                  Khi Ổn Định Kiến Thức
+                </h3>
+
+                <div class="content__timeline border-none">
+                  <h3 class="content__timeline-heading">Ổn định kiến thức</h3>
+                  <p class="content__timeline-date">2023</p>
+                  <p class="content__timeline-decs">
+                    Tìm kiếm những công ty công nghệ tại Thành Phố Hồ Chí Minh
+                    thực tập, để có thể tiếp cận với những dự án lớn và cách vận
+                    hành, học và tìm hiểu thêm về công nghệ mới. Cải thiện nói
+                    và viết Tiếng Anh
+                  </p>
+                </div>
+              </div>
+              <!-- interests -->
+              <div class="content__container">
+                <h2 class="content__heading">Sở thích</h2>
+                <h3 class="content__heading-interests">
+                  <i
+                    class="content-education__icon"
+                    style="background-image: url(./assets/img/icon/game.png)"
+                  ></i>
+                  Chơi game
+                </h3>
+                <ul class="interests">
+                  <li class="interests__item">
+                    <a
+                      href="https://lienminh.garena.vn/"
+                      target="_blank"
+                      class="interests__link"
                     >
-                    </lord-icon>
-                    <h3 class="sidebar-item__name">BẢN THÂN</h3>
+                      <img
+                        class="interests__img"
+                        src="./assets/img/avt/game.jpg"
+                        alt=""
+                      />
+                      <div class="interests__content">
+                        <h3 class="interests__name">Liên minh huyền thoại</h3>
+                        <span class="interests__decs"
+                          >Con game đã gắn bó với mình lâu nhất từ những năm
+                          2013 cho đến giờ, nó đã giúp giảm tải căng thẳng trong
+                          việc học tập, ai có chung sở thích thì kết bạn cùng
+                          mình solo vài ván Yasuo :')</span
+                        >
+
+                        <span class="interests__user-name"
+                          >InGame: Dz...Mr_Phèo</span
+                        >
+                      </div>
+                    </a>
                   </li>
-                  <li class="sidebar-item" data-index="1">
-                    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-                    <lord-icon
-                      src="https://cdn.lordicon.com/wxnxiano.json"
-                      trigger="morph"
-                      style="width: 60px; height: 60px"
+                  <li class="interests__item">
+                    <a
+                      href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/"
+                      target="_blank"
+                      class="interests__link"
                     >
-                    </lord-icon>
-                    <h3 class="sidebar-item__name">HỌC VẤN</h3>
-                  </li>
-                  <li class="sidebar-item" data-index="2">
-                    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-                    <lord-icon
-                      src="https://cdn.lordicon.com/iltqorsz.json"
-                      trigger="morph"
-                      style="width: 60px; height: 60px"
-                    >
-                    </lord-icon>
-                    <h3 class="sidebar-item__name">MỤC TIÊU</h3>
-                  </li>
-                  <li class="sidebar-item" data-index="3">
-                    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-                    <lord-icon
-                      src="https://cdn.lordicon.com/rjzlnunf.json"
-                      trigger="morph"
-                      style="width: 60px; height: 60px"
-                    >
-                    </lord-icon>
-                    <h3 class="sidebar-item__name">SỞ THÍCH</h3>
+                      <img
+                        class="interests__img"
+                        src="./assets/img/avt/pubg.jpg"
+                        alt=""
+                      />
+                      <d2iv class="interests__content">
+                        <h3 class="interests__name">
+                          PlayerUnknown's Battlegrounds
+                        </h3>
+                        <span class="interests__decs">
+                          Đây là một thể loại game thuộc dạng đấu trường sinh
+                          tử, sẽ chiến thắng khi là người sống sót cùng. Ai có
+                          chung sở thích có thể kết bạn cùng mình.
+                        </span>
+
+                        <span class="interests__user-name"
+                          >InGame: phuongprovttv</span
+                        >
+                      </d2iv>
+                    </a>
                   </li>
                 </ul>
-              </div>
-            </div>
 
-            <div class="grid__col-10">
-              <div class="content">
-                <!-- content__container--activity: on -->
-
-                <!-- introduce -->
-                <div class="content__container content__container--activity">
-                  <h2 class="content__heading">Giới thiệu</h2>
-                  <span class="content__desc">
-                    Mình tên Nguyễn Văn Phương có kiến thức về front end, trẻ và
-                    đầy nhiệt huyết, không ngừng học hỏi những công nghệ mới.
-                    Hiện tại mình đang học online tại Codegym, F8 và Trung Tâm
-                    Tiếng Anh Hireme
-                  </span>
-                  <span class="content__desc">
-                    Trong quá trình tự học mình luôn gặp nhiều vấn đề khó và nó
-                    đã làm cho mình thiếu động lực để tiếp tục cố gắng, nhưng
-                    những lúc như vậy mình luôn tự hỏi, tại sao mình lại bắt đầu
-                    và đã bắt đầu rồi thì phải biết cách kết thúc nó. Câu hỏi
-                    này cho mình thêm động lực để tiếp tục trên con đường trở
-                    thành một Wed Developer.
-                  </span>
-                  <h3 class="content__desc-mainly">
-                    Hiện tại mình đang cần những người bạn có chung mục tiêu trở
-                    thành một Web Developer, giúp đỡ nhau giải quyết những vấn
-                    đề khó và cùng nhau phát triển, làm ra những dự án lớn trong
-                    tương lai. Bạn nào muốn có thể kết bạn
-                    <a href="#" class="content__desc-mainly-link">FACEBOOK</a>
-                    của mình.
-                  </h3>
-                  <h2 class="content__heading-sub">Sản phẩm của mình</h2>
-                  <div class="grid__row">
-                    <div class="grid__col-6">
-                      <div class="product">
-                        <a
-                          href="https://the-band-2022.netlify.app/"
-                          class="product__link"
-                          target="_blank"
-                        >
-                          <div
-                            class="product__link-img"
-                            style="
-                              background: url(/assets/img/product/Screenshot\ 2022-06-30\ 104651.png)
-                                top/cover;
-                            "
-                          ></div>
-                          <h2 class="product__link-num">01</h2>
-                          <h2
-                            class="product__link-heading"
-                            style="--product-color: white"
-                          >
-                            The Band
-                          </h2>
-                        </a>
+                <h3 class="content__heading-interests">
+                  <i
+                    class="content-education__icon"
+                    style="background-image: url(./assets/img/icon/movie.png)"
+                  ></i>
+                  Xem Phim
+                </h3>
+                <ul class="interests">
+                  <li class="interests__item">
+                    <a
+                      href="https://www.marvel.com/movies/avengers-endgame"
+                      target="_blank"
+                      class="interests__link"
+                    >
+                      <img
+                        class="interests__img"
+                        src="./assets/img/avt/1933506.jpg"
+                        alt=""
+                      />
+                      <div class="interests__content">
+                        <h3 class="interests__name">Avengers</h3>
+                        <span class="interests__decs">
+                          Avengers là phim điện ảnh siêu anh hùng Mỹ, khoa học
+                          viễn tưởng có những pha combat tuyệt vời và sự đầu tư
+                          kĩ lưỡng mang đến cho người xem cảm giác chân thật.
+                        </span>
                       </div>
-                    </div>
-                    <div class="grid__col-6">
-                      <div class="product">
-                        <a href="#" class="product__link">
-                          <div
-                            class="product__link-img"
-                            style="
-                              background: url(/assets/img/product/Screenshot\ 2022-06-17\ 174845.png)
-                                top/cover;
-                            "
-                          ></div>
-                          <h2 class="product__link-num">02</h2>
-                          <h2
-                            class="product__link-heading"
-                            style="--product-color: #f6422e"
-                          >
-                            SHOPPEE
-                          </h2>
-                        </a>
+                    </a>
+                  </li>
+                  <li class="interests__item">
+                    <a
+                      href="https://www.netflix.com/vn/title/81245964"
+                      target="_blank"
+                      class="interests__link"
+                    >
+                      <img
+                        class="interests__img"
+                        src="./assets/img/avt/62694e14a6039aa692f7efa1_365-1.jpg"
+                        alt=""
+                      />
+                      <div class="interests__content">
+                        <h3 class="interests__name">365 Days</h3>
+                        <span class="interests__decs">
+                          365 Days là một bộ phim tình cảm mang tính hành động,
+                          giúp cho người xem hiểu rõ về con người, sẽ hay hơn
+                          khi xem cùng người yêu.
+                        </span>
                       </div>
-                    </div>
-                  </div>
+                    </a>
+                  </li>
+                </ul>
 
-                  <!-- slider -->
-                  <div class="slider">
-                    <h2 class="content__heading-sub content__slider-heading">
-                      Những nói truyền cảm hứng
-                    </h2>
-                    <div class="slider__icon slider__icon-left">
-                      <i class="fa-solid fa-angle-left"></i>
-                    </div>
-                    <ul class="slider__control">
-                      <li
-                        class="slider__control-item slider__control-item--active"
-                        data-index="0"
-                      ></li>
-                      <li class="slider__control-item" data-index="1"></li>
-                      <li class="slider__control-item" data-index="2"></li>
-                      <li class="slider__control-item" data-index="3"></li>
-                    </ul>
-                    <div class="slider__wrap">
-                      <ul class="slider__list">
-                        <li class="slider__item">
-                          <div
-                            class="slider__img"
-                            style="
-                              background: url(./assets/img/avt/meo.jpg)
-                                no-repeat top/cover;
-                            "
-                          ></div>
-                          <div class="slider__content">
-                            <h1 class="slider__content-heading">MR. Khanh</h1>
-                            <span class="slider__content-decs">
-                              "Trong quãng thời gian bạn cố gắng hoàn thành
-                              những mục tiêu, đôi lúc bạn cảm thấy thiếu động
-                              lực, chán nản rồi bạn sẽ dừng lại vài ngày, 1 tuần
-                              hoặc lâu hơn và điều đó sẽ dẫn đến những hậu quả
-                              trong tương lai."
-                            </span>
-                            <h2 class="slider__content-main">
-                              Bạn Chỉ Thất Khi Bạn Ngừng Cố Gắng
-                            </h2>
-                          </div>
-                        </li>
-                        <li class="slider__item">
-                          <div
-                            class="slider__img"
-                            style="
-                              background: url(/assets/img/avt/quyet.jpg)
-                                no-repeat top/cover;
-                            "
-                          ></div>
-                          <div class="slider__content">
-                            <h1 class="slider__content-heading">MR. Quyết</h1>
-                            <span class="slider__content-decs">
-                              "Khi bạn còn trẻ hãy luôn cố gắng cải thiện bản
-                              thân và biết cách lắng nghe. Không quan tâm những
-                              người xung quanh làm ít hơn mình mà hãy không
-                              ngừng học hỏi. Một ngày nào đó điều tuyệt vời sẽ
-                              đến với bạn."</span
-                            >
-                            <h2 class="slider__content-main">
-                              Hãy Luôn Cố gắng cải thiện bản thân
-                            </h2>
-                          </div>
-                        </li>
-
-                        <li class="slider__item">
-                          <div
-                            class="slider__img"
-                            style="
-                              background: url(/assets/img/avt/angela2.jpg)
-                                no-repeat top/cover;
-                            "
-                          ></div>
-                          <div class="slider__content">
-                            <h1 class="slider__content-heading">
-                              Angela Duckworth
-                            </h1>
-                            <span class="slider__content-decs">
-                              "Tài năng bẩm sinh không phải là yếu tố duy nhất
-                              quyết định sự thành bài của mỗi người. Bởi bên
-                              cạch đó, chìa khóa tạo nên thành công lại là điều
-                              mà ai cũng đều có thể xây dựng và rèn luyện: Sự
-                              bền bỉ."</span
-                            >
-                            <h2 class="slider__content-main">
-                              Nếu tài năng quan trọng thì nỗ lực quan trọng gấp
-                              đôi
-                            </h2>
-                          </div>
-                        </li>
-                        <li class="slider__item">
-                          <div
-                            class="slider__img"
-                            style="
-                              background: url(/assets/img/avt/1575827117-275-winston-churchill--vi-thu-tuong-chua-chom-cua-nuoc-anh-6-wc1-1575820163-width760height612.jpg)
-                                no-repeat top/cover;
-                            "
-                          ></div>
-                          <div class="slider__content">
-                            <h1 class="slider__content-heading">
-                              Winston Churchill
-                            </h1>
-                            <span class="slider__content-decs">
-                              "Những số phận nghiệt ngã, hoàn cảnh éo le không
-                              phải là rào cản ngăn cách con người tới với sự
-                              thành công, thành công sẽ tới với những người kiên
-                              trì và biết vượt qua khó khăn để khẳng định
-                              mình."</span
-                            >
-                            <h2 class="slider__content-main">
-                              Nếu bạn định bước qua địa ngục, hãy cứ tiếp tục
-                            </h2>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="slider__icon slider__icon-right">
-                      <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- education -->
-                <div class="content__container content-education">
-                  <h2 class="content__heading animate__bounce">Học vấn</h2>
-                  <h3 class="content__heading-education">
-                    <i
-                      class="content-education__icon"
-                      style="
-                        background-image: url(./assets/img/icon/education.png);
-                      "
-                    ></i>
-                    Giáo dục
-                  </h3>
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">
-                      Trường Đại Học Giao Thông Vận Tải Thành Phố Hồ Chí Minh
-                    </h3>
-                    <p class="content__timeline-date">2018</p>
-                    <span class="content__timeline-decs">
-                      Sau khi tốt nghiệp cấp 3, mình theo học tại Trường Đại Học
-                      Giao Thông Vận Tải Thành Phố Hồ Chí Minh.
-                    </span>
-                  </div>
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">Tổ Quốc Gọi Tên</h3>
-                    <p class="content__timeline-date">2020</p>
-                    <span class="content__timeline-decs">
-                      Bảo lưu học tập và lên đường nhập ngũ. Trong quá trình
-                      thực hiện nghĩa vụ quân sự mình đã trải quá trình rèn
-                      luyện rất khắc nghiệt. Điều đó đã giúp cho mình trở thành
-                      con người mạnh mẽ hơn, có thể đối mặt với những khó khắn
-                      và áp lực trong cuộc sống.
-                    </span>
-                  </div>
-                  <div class="content__timeline border-none">
-                    <h3 class="content__timeline-heading">
-                      Đăng kí học lập trình Online và Tiếng Anh
-                    </h3>
-                    <p class="content__timeline-date">2022</p>
-                    <span class="content__timeline-decs">
-                      Sau khi hoàn thành nghĩa vụ quân sự, mình đăng kí khóa học
-                      online tại Codegym, trong quá trình tự học thì mình có học
-                      thì mình có học tập thêm tại F8, W3schools, MDN. Vì mình
-                      biết nếu lập trình mà không có Tiếng Anh thì sẽ không thể
-                      tiến xa được nên mình quyết định đăng kí học thêm Tiếng
-                      Anh HIREME tại Vũng Tàu.
-                    </span>
-                  </div>
-
-                  <h3 class="content__heading-education">
-                    <i
-                      class="content-education__icon"
-                      style="background-image: url(./assets/img/icon/exp.png)"
-                    ></i>
-                    Kiến thức
-                  </h3>
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">HTML</h3>
-                    <p class="content__timeline-date">
-                      HyperText Markup Language
-                    </p>
-                    <span class="content__timeline-decs">
-                      HTML được dịch là "Ngôn ngữ đánh dấu siêu văn bản", nó
-                      được dùng để tạo ra các tài liệu hiện thị được trên trình
-                      duyệt. HTML gọi là ngôn ngữ nhưng nó không giống như các
-                      ngôn ngữ kịch bản hay ngôn ngữ lập trình (sử dụng các kịch
-                      bản để thi hành các tác vụ), ngôn ngữ đánh dấu HTML lại sử
-                      dụng các thẻ để xác định nội dung của trang.
-                    </span>
-                  </div>
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">CSS</h3>
-                    <p class="content__timeline-date">Cascading Style Sheets</p>
-                    <span class="content__timeline-decs">
-                      CSS là một ngôn ngữ được sử dụng để tìm và định dạng lại
-                      các phần tử được tạo ra bởi ngôn ngữ đánh dấu (HTML). Nói
-                      ngắn gọn hơn là ngôn ngữ tạo phong cách cho trang web.
-                    </span>
-                  </div>
-                  <div class="content__timeline border-none">
-                    <h3 class="content__timeline-heading">JS</h3>
-                    <p class="content__timeline-date">JavaScript</p>
-                    <span class="content__timeline-decs">
-                      Javascript là một ngôn ngữ lập trình kịch bản được sử dụng
-                      rộng rãi trong các ứng dụng Website và được hỗ trợ hầu như
-                      trên tất cả các trình duyệt trên cả máy tính lẫn điện
-                      thoại. Nhiệm vụ của Javascript là xử lý những đối tượng
-                      HTML trên trình duyệt. Nó có thể can thiệp với các hành
-                      động như thêm / xóa / sửa các thuộc tính CSS và các thẻ
-                      HTML một cách dễ dàng.
-                    </span>
-                  </div>
-                  <div class="education-skill">
-                    <div class="education-skill__wrap">
-                      <div class="education-skill__card">
-                        <div
-                          class="education-skill__percent"
-                          style="--color: #ff5b00; --num: 50"
-                        >
-                          <div class="education-skill__dot"></div>
-                          <div class="ducation-skill__circle wow"></div>
-                          <svg>
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle class="" cx="70" cy="70" r="70"></circle>
-                          </svg>
-                          <div class="education-skill__decs">
-                            <div class="education-skill__decs-heading">
-                              <h2 class="education-skill__num">50</h2>
-                              <span class="education-skill__num-percent"
-                                >%</span
-                              >
-                            </div>
-                            <span class="education-skill__name">HTML</span>
-                          </div>
-                        </div>
+                <h3 class="content__heading-interests">
+                  <i
+                    class="content-education__icon"
+                    style="background-image: url(./assets/img/icon/music.png)"
+                  ></i>
+                  Nghe nhạc
+                </h3>
+                <ul class="interests">
+                  <li class="interests__item">
+                    <a
+                      href="https://www.youtube.com/results?search_query=nhac+lofi+chill"
+                      target="_blank"
+                      class="interests__link"
+                    >
+                      <img
+                        class="interests__img"
+                        src="./assets/img/avt/nhac-lofi-la-gi.jpg"
+                        alt=""
+                      />
+                      <div class="interests__content">
+                        <h3 class="interests__name">Lofi Chill</h3>
+                        <span class="interests__decs">
+                          Đây là thể loại nhạc nhẹ nhàng có tiết tấu chậm, giúp
+                          thư giãn đầu óc và có thể tăng 200% công lực khi Fix
+                          Bug.
+                        </span>
                       </div>
-                      <div class="education-skill__card">
-                        <div
-                          class="education-skill__percent"
-                          style="--color: #3ec70b; --num: 30"
-                        >
-                          <div class="education-skill__dot"></div>
-                          <div class="ducation-skill__circle wow"></div>
-                          <svg>
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle class="" cx="70" cy="70" r="70"></circle>
-                          </svg>
-                          <div class="education-skill__decs">
-                            <div class="education-skill__decs-heading">
-                              <h2 class="education-skill__num">30</h2>
-                              <span class="education-skill__num-percent"
-                                >%</span
-                              >
-                            </div>
-                            <span class="education-skill__name">CSS</span>
-                          </div>
-                        </div>
+                    </a>
+                  </li>
+                  <li class="interests__item">
+                    <a
+                      href="https://www.youtube.com/results?search_query=nhac+pop+viet+nam"
+                      target="_blank"
+                      class="interests__link"
+                    >
+                      <img
+                        class="interests__img"
+                        src="./assets/img/avt/nhac-pop-650.jpg"
+                        alt=""
+                      />
+                      <div class="interests__content">
+                        <h3 class="interests__name">POP</h3>
+                        <span class="interests__decs">
+                          Đây là một thể loại nhạc trẻ và phổ biến tại Việt Nam,
+                          có các bản hit nổi tiếng như Lạc Trôi, Hoa Hải Đường,
+                          Một Nhà, ....
+                        </span>
                       </div>
-                      <div class="education-skill__card">
-                        <div
-                          class="education-skill__percent"
-                          style="--color: #f7ec09; --num: 10"
-                        >
-                          <div class="education-skill__dot"></div>
-                          <div class="ducation-skill__circle wow"></div>
-                          <svg>
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle class="" cx="70" cy="70" r="70"></circle>
-                          </svg>
-                          <div class="education-skill__decs">
-                            <div class="education-skill__decs-heading">
-                              <h2 class="education-skill__num">10</h2>
-                              <span class="education-skill__num-percent"
-                                >%</span
-                              >
-                            </div>
-                            <span class="education-skill__name"
-                              >JAVASCRIPT</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Goal -->
-                <div class="content__container content__container-goal">
-                  <h2 class="content__heading">Mục Tiêu</h2>
-                  <h3 class="content__heading-sub content__heading-sub-goal">
-                    Ngắn Hạn
-                  </h3>
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">
-                      Hoàn thành Javascript và Ngữ pháp Tiếng Anh căn bản
-                    </h3>
-                    <p class="content__timeline-date">04 - 05/2022</p>
-                    <span class="content__timeline-decs">
-                      Làm một số sản phẩm về sử dụng Javascript cơ bản, Học từ
-                      vựng, ngữ pháp và luyện nghe part 1, 2 TOEIC
-                    </span>
-                  </div>
-
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">
-                      Hoàn thành HTML và CSS. Học sâu hơn về ngữ pháp Tiếng Anh
-                    </h3>
-                    <p class="content__timeline-date">06 - 07/2022</p>
-                    <span class="content__timeline-decs">
-                      Làm một số trang web tĩnh và blog cá nhân. Học từ vựng,
-                      ngữ pháp và luyện nghe part 3, 4 TOEIC
-                    </span>
-                  </div>
-
-                  <div class="content__timeline">
-                    <h3 class="content__timeline-heading">
-                      Hoàn thành Javascript nâng cao và ReactJS. Học sâu hơn về
-                      ngữ pháp Tiếng Anh
-                    </h3>
-                    <p class="content__timeline-date">08 - 10/2022</p>
-                    <span class="content__timeline-decs">
-                      Làm trang Web như Tiktok và một vài trang Web có thể tương
-                      tác. Học từ vựng, ngữ pháp và luyện nghe part 1, 2, 3, 4
-                      TOEIC
-                    </span>
-                  </div>
-
-                  <div class="content__timeline content__timeline-end">
-                    <h3 class="content__timeline-heading">
-                      Làm dự án. Luyện giải đề Toeic.
-                    </h3>
-                    <p class="content__timeline-date">11 - 12/2022</p>
-                    <span class="content__timeline-decs">
-                      Áp dụng những kiến thức đã học và làm ra một vài dự án.
-                      Tổng hợp những kiến thức Tiếng Anh và thi TOEIC
-                    </span>
-                  </div>
-
-                  <h3 class="content__heading-knowledge">
-                    Khi Ổn Định Kiến Thức
-                  </h3>
-
-                  <div class="content__timeline border-none">
-                    <h3 class="content__timeline-heading">Ổn định kiến thức</h3>
-                    <p class="content__timeline-date">2023</p>
-                    <p class="content__timeline-decs">
-                      Tìm kiếm những công ty công nghệ tại Thành Phố Hồ Chí Minh
-                      thực tập, để có thể tiếp cận với những dự án lớn và cách
-                      vận hành, học và tìm hiểu thêm về công nghệ mới. Cải thiện
-                      nói và viết Tiếng Anh
-                    </p>
-                  </div>
-                </div>
-                <!-- interests -->
-                <div class="content__container">
-                  <h2 class="content__heading">Sở thích</h2>
-                  <h3 class="content__heading-interests">
-                    <i
-                      class="content-education__icon"
-                      style="background-image: url(./assets/img/icon/game.png)"
-                    ></i>
-                    Chơi game
-                  </h3>
-                  <ul class="interests">
-                    <li class="interests__item">
-                      <a href="#" class="interests__link">
-                        <img
-                          class="interests__img"
-                          src="./assets/img/avt/game.jpg"
-                          alt=""
-                        />
-                        <div class="interests__content">
-                          <h3 class="interests__name">Liên minh huyền thoại</h3>
-                          <span class="interests__decs"
-                            >Con game đã gắn bó với mình lâu nhất từ những năm
-                            2013 cho đến giờ, nó đã giúp giảm tải căng thẳng
-                            trong việc học tập, ai có chung sở thích thì kết bạn
-                            cùng mình solo vài ván Yasuo :')</span
-                          >
-
-                          <span class="interests__user-name"
-                            >InGame: Dz...Mr_Phèo</span
-                          >
-                        </div>
-                      </a>
-                    </li>
-                    <li class="interests__item">
-                      <a href="#" class="interests__link">
-                        <img
-                          class="interests__img"
-                          src="./assets/img/avt/pubg.jpg"
-                          alt=""
-                        />
-                        <d2iv class="interests__content">
-                          <h3 class="interests__name">
-                            PlayerUnknown's Battlegrounds
-                          </h3>
-                          <span class="interests__decs">
-                            Đây là một thể loại game thuộc dạng đấu trường sinh
-                            tử, sẽ chiến thắng khi là người sống sót cùng. Ai có
-                            chung sở thích có thể kết bạn cùng mình.
-                          </span>
-
-                          <span class="interests__user-name"
-                            >InGame: phuongprovttv</span
-                          >
-                        </d2iv>
-                      </a>
-                    </li>
-                  </ul>
-
-                  <h3 class="content__heading-interests">
-                    <i
-                      class="content-education__icon"
-                      style="background-image: url(./assets/img/icon/movie.png)"
-                    ></i>
-                    Xem Phim
-                  </h3>
-                  <ul class="interests">
-                    <li class="interests__item">
-                      <a href="#" class="interests__link">
-                        <img
-                          class="interests__img"
-                          src="./assets/img/avt/1933506.jpg"
-                          alt=""
-                        />
-                        <div class="interests__content">
-                          <h3 class="interests__name">Avengers</h3>
-                          <span class="interests__decs">
-                            Avengers là phim điện ảnh siêu anh hùng Mỹ, khoa học
-                            viễn tưởng có những pha combat tuyệt vời và sự đầu
-                            tư kĩ lưỡng mang đến cho người xem cảm giác chân
-                            thật.
-                          </span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="interests__item">
-                      <a href="#" class="interests__link">
-                        <img
-                          class="interests__img"
-                          src="./assets/img/avt/62694e14a6039aa692f7efa1_365-1.jpg"
-                          alt=""
-                        />
-                        <div class="interests__content">
-                          <h3 class="interests__name">365 Days</h3>
-                          <span class="interests__decs">
-                            365 Days là một bộ phim tình cảm mang tính hành
-                            động, giúp cho người xem hiểu rõ về con người, sẽ
-                            hay hơn khi xem cùng người yêu.
-                          </span>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-
-                  <h3 class="content__heading-interests">
-                    <i
-                      class="content-education__icon"
-                      style="background-image: url(./assets/img/icon/music.png)"
-                    ></i>
-                    Nghe nhạc
-                  </h3>
-                  <ul class="interests">
-                    <li class="interests__item">
-                      <a href="#" class="interests__link">
-                        <img
-                          class="interests__img"
-                          src="./assets/img/avt/nhac-lofi-la-gi.jpg"
-                          alt=""
-                        />
-                        <div class="interests__content">
-                          <h3 class="interests__name">Lofi Chill</h3>
-                          <span class="interests__decs">
-                            Đây là thể loại nhạc nhẹ nhàng có tiết tấu chậm,
-                            giúp thư giãn đầu óc và có thể tăng 200% công lực
-                            khi Fix Bug.
-                          </span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="interests__item">
-                      <a href="#" class="interests__link">
-                        <img
-                          class="interests__img"
-                          src="./assets/img/avt/nhac-pop-650.jpg"
-                          alt=""
-                        />
-                        <div class="interests__content">
-                          <h3 class="interests__name">POP</h3>
-                          <span class="interests__decs">
-                            Đây là một thể loại nhạc trẻ và phổ biến tại Việt
-                            Nam, có các bản hit nổi tiếng như Lạc Trôi, Hoa Hải
-                            Đường, Một Nhà, ....
-                          </span>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -782,7 +806,6 @@
     </div>
     <div class="heart"></div>
     <div class="star"></div>
-    <div class="circle"></div>
     <div class="square"></div>
 
     <script src="./assets/wow/dist/wow.min.js"></script>

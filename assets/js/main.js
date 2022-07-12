@@ -22,7 +22,7 @@ function handleScroll() {
   window.onscroll = () => {
     let contentTop = content.offsetTop;
     let scrollTop = window.scrollY || document.documentElement.offsetTop;
-    if (scrollTop > contentTop) {
+    if (scrollTop > contentTop - 10) {
       nav.classList.add("fixed");
     } else if (scrollTop <= contentTop - 12) {
       nav.classList.remove("fixed");
@@ -84,7 +84,7 @@ function handleSlider() {
   let sliderItems = document.querySelectorAll(".slider__item");
   let leftBnt = document.querySelector(".slider__icon-left");
   let rightBnt = document.querySelector(".slider__icon-right");
-  let controlItems = document.querySelectorAll(".slider__control-item");
+  var controlItems = document.querySelectorAll(".slider__control-item");
   var sliderItemWidth = sliderItems[0].offsetWidth;
   let sliderItemAmount = sliderItems.length;
   var positionX = 0;
@@ -110,6 +110,7 @@ function handleSlider() {
     // right
     function handleRight() {
       var sliderItemWidth = sliderItems[0].offsetWidth;
+      var controlItems = document.querySelectorAll(".slider__control-item");
       positionX = positionX - sliderItemWidth;
       console.log("positionX", positionX);
       index = Math.abs(positionX) / sliderItemWidth;
@@ -129,6 +130,7 @@ function handleSlider() {
     // left
     function handleLeft() {
       var sliderItemWidth = sliderItems[0].offsetWidth;
+      var controlItems = document.querySelectorAll(".slider__control-item");
       positionX = positionX + sliderItemWidth;
       index = positionX / -sliderItemWidth;
       if (index < 0) {
@@ -148,6 +150,7 @@ function handleSlider() {
   // handle Control item
   [...controlItems].forEach((ele) =>
     ele.addEventListener("click", function (e) {
+      var sliderItemWidth = sliderItems[0].offsetWidth;
       positionX = -e.target.dataset.index * sliderItemWidth;
       sliderList.style = `transform: translateX(${positionX}px)`;
       [...controlItems].forEach((ele) =>

@@ -1,0 +1,186 @@
+/* > PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .fixed .sidebar {
+    width: 144px;
+    padding: 14px 21px;
+  }
+}
+
+/* Mobile & table */
+@media (max-width: 1023px) {
+  #header {
+    margin-top: 120px;
+  }
+
+  .box {
+    top: -60px;
+  }
+
+  .header__contain {
+    flex-direction: column;
+  }
+
+  .header__left {
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .header__left-avt {
+    margin-top: -15%;
+    margin-bottom: 5%;
+    box-shadow: 0 8px 11px 2px rgb(0 29 110 / 26%);
+  }
+
+  .header__left-social {
+    margin-top: 16px;
+  }
+
+  .header__right {
+    margin-top: 30px;
+  }
+
+  .header__right-info:last-child {
+    margin-top: 25px;
+  }
+
+  #nav.fixed {
+    top: unset;
+    bottom: 0;
+    display: block;
+    z-index: 10000;
+  }
+
+  .sidebar {
+    flex-direction: row;
+  }
+
+  .fixed .sidebar {
+    width: 645px;
+    background-color: rgba(247, 247, 247, 0.6);
+  }
+
+  .sidebar-item {
+    padding: 0;
+    margin: 0 15px;
+    border-radius: 1.5rem;
+  }
+
+  .content {
+    margin-bottom: 150px;
+  }
+
+  .product__link {
+    min-height: 175px;
+  }
+
+  .product__link-num {
+    font-size: 9rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .mb-s-2 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  #header {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .mt-c-2 {
+    margin-top: 20px;
+  }
+
+  .box span {
+    font-size: 2.5rem;
+    line-height: 0.66em;
+  }
+
+  .heart {
+    left: 16%;
+  }
+
+  .header__right-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__right-birth-country {
+    margin-top: 25px;
+  }
+
+  #nav.fixed {
+    position: static;
+    animation: none;
+  }
+
+  #nav.container__sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #nav .sidebar {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .sidebar-item {
+    margin: 10px 4px;
+    background-color: rgba(247, 247, 247, 1);
+  }
+
+  lord-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .sidebar-item__name {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    margin-bottom: 120px;
+  }
+
+  .product__link {
+    min-height: 190px;
+  }
+
+  .slider__item {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .slider__content {
+    margin-top: 24px;
+  }
+
+  .interests__link {
+    flex-direction: column;
+  }
+
+  .interests__content {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .loading__text {
+    font-size: 3rem;
+  }
+}

@@ -6,7 +6,7 @@
 }
 
 :root {
-  --text-color: #333;
+  --text-color: #000;
   --while-color: #fff;
   --black-color: #000;
 }
@@ -36,12 +36,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.grid {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
 .grid__row {
   display: flex;
   flex-wrap: wrap;
@@ -59,12 +53,6 @@ body {
   width: 83.333%;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .grid__col-6 {
