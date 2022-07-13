@@ -24,7 +24,6 @@ html {
 }
 
 body {
-  position: relative;
   background: radial-gradient(rgba(86, 187, 241, 0.8), #56bbf1, #47b5ff)
     no-repeat top/cover;
   scroll-behavior: smooth;
