@@ -1075,7 +1075,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 900;
   position: absolute;
-  top: 2%;
+  top: -2%;
   left: 50%;
   width: 370px;
   line-height: 3rem;
@@ -1119,8 +1119,8 @@
 /*  heart */
 .heart {
   position: absolute;
-  top: 100%;
-  left: 67%;
+  top: 39%;
+  left: 71%;
   width: 90px;
   height: 90px;
   color: #fd5d5d;
@@ -1175,8 +1175,8 @@
   border-bottom: 70px solid currentColor;
   border-left: 100px solid transparent;
   position: absolute;
-  top: 23%;
-  left: 36%;
+  top: 28%;
+  left: 23%;
   color: rgba(255, 250, 103, 0.9);
   width: 0;
   height: 0;
@@ -1253,8 +1253,8 @@
   height: 120px;
   background-color: #06ff00;
   position: absolute;
-  top: 136%;
-  left: 50%;
+  top: 71%;
+  left: 27%;
   animation: animateSquare 10s linear infinite;
   z-index: -1;
   opacity: 0.5;

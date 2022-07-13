@@ -82,6 +82,9 @@
   .mb-s-2 {
     margin-bottom: 20px;
   }
+  .box {
+    top: -3%;
+  }
 }
 
 /* Mobile */
@@ -102,6 +105,7 @@
 
   .box {
     width: 254px;
+    top: -3%;
   }
 
   .box span {
