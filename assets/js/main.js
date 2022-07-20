@@ -3,6 +3,11 @@ VanillaTilt.init(document.querySelectorAll(".product__link"), {
   speed: 200,
 });
 
+new WOW().init();
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
 function start() {
   handleLoading();
   addEducationClass();
@@ -44,28 +49,30 @@ function handleScroll() {
 function addClass() {
   var listSidebar = document.querySelectorAll(".sidebar-item");
   var listContent = document.querySelectorAll(".content__container");
-  for (i = 0; i < listSidebar.length; i++) {
-    listSidebar[i].addEventListener("click", function (e) {
-      var indexSidebar = this.dataset.index;
-      console.log();
-      for (j = 0; j < listSidebar.length; j++) {
-        listSidebar[j].classList.remove("sidebar-item--activity");
-        listContent[j].classList.remove("content__container--activity");
+
+  var activeSidebar = $(".sidebar-item.active");
+  listSidebar.forEach((item, index) => {
+    item.onclick = function () {
+      if ($(".sidebar-item.active") !== null) {
+        $(".sidebar-item.active").classList.remove("active");
       }
-      this.classList.add("sidebar-item--activity");
-      listContent[indexSidebar].classList.add("content__container--activity");
-      listContent[indexSidebar].scrollIntoView({
+      $(".content__container.active").classList.remove("active");
+
+      this.classList.add("active");
+      listContent[index].classList.add("active");
+
+      listContent[index].scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-      var educationClass = listContent[indexSidebar].classList[1];
+      var educationClass = listContent[index].classList[1];
       if (educationClass == "content-education") {
         setTimeout(() => {
           new WOW().init();
         }, 1000);
       }
-    });
-  }
+    };
+  });
 }
 
 function addEducationClass() {
@@ -79,94 +86,65 @@ function addEducationClass() {
 }
 
 function handleSlider() {
-  let slider = document.querySelector(".slider");
-  let sliderList = document.querySelector(".slider__list");
-  let sliderItems = document.querySelectorAll(".slider__item");
-  let leftBnt = document.querySelector(".slider__icon-left");
-  let rightBnt = document.querySelector(".slider__icon-right");
-  var controlItems = document.querySelectorAll(".slider__control-item");
-  var sliderItemWidth = sliderItems[0].offsetWidth;
-  let sliderItemAmount = sliderItems.length;
-  var positionX = 0;
-  var index = 0;
-  var time = 9000;
-  leftBnt.addEventListener("click", function () {
-    handleBnt(-1);
-    return;
-  });
+  const prevBnt = $(".slider__icon-left");
+  const nextBnt = $(".slider__icon-right");
+  const controlItems = $$(".slider__control-item");
+  console.log(controlItems);
 
-  rightBnt.addEventListener("click", function () {
-    handleBnt(1);
-    return;
-  });
+  const sliderItems = $$(".slider__item");
+  const sliderList = $(".slider__list");
+  var currentIndex = 0;
 
-  function handleBnt(receive) {
-    if (receive == 1) {
-      handleRight();
-    } else if (receive == -1) {
-      handleLeft();
-    }
+  nextBnt.onclick = function () {
+    handleNextBnt();
+  };
 
-    // right
-    function handleRight() {
-      var sliderItemWidth = sliderItems[1].offsetWidth;
-      var controlItems = document.querySelectorAll(".slider__control-item");
-      positionX = positionX - sliderItemWidth;
-      index = Math.abs(positionX) / sliderItemWidth;
-      if (index > sliderItemAmount - 1) {
-        index = 0;
-      }
-      [...controlItems].forEach((ele) =>
-        ele.classList.remove("slider__control-item--active")
-      );
-      if (controlItems[index] == undefined) {
-        controlItems[0].classList.add("slider__control-item--active");
-      } else {
-        controlItems[index].classList.add("slider__control-item--active");
-      }
-      if (positionX <= -sliderItemAmount * sliderItemWidth) {
-        positionX = 0;
-      }
-      sliderList.style = `transform: translateX(${positionX}px)`;
-    }
+  prevBnt.onclick = function () {
+    handlePrevBnt();
+  };
 
-    // left
-    function handleLeft() {
-      var sliderItemWidth = sliderItems[0].offsetWidth;
-      var controlItems = document.querySelectorAll(".slider__control-item");
-      positionX = positionX + sliderItemWidth;
-      index = positionX / -sliderItemWidth;
-      if (index < 0) {
-        index = sliderItemAmount - 1;
-      }
-      [...controlItems].forEach((ele) =>
-        ele.classList.remove("slider__control-item--active")
-      );
-      controlItems[index].classList.add("slider__control-item--active");
-      if (positionX > 0) {
-        positionX = (-sliderItemAmount + 1) * sliderItemWidth;
-      }
-      sliderList.style = `transform: translateX(${positionX}px)`;
-    }
+  // show Slider
+  function showSlider() {
+    sliderList.style.transform = `translateX(${-sliderItems[currentIndex]
+      .offsetLeft}px)`;
   }
 
-  // handle Control item
-  [...controlItems].forEach((ele) =>
-    ele.addEventListener("click", function (e) {
-      var sliderItemWidth = sliderItems[0].offsetWidth;
-      positionX = -e.target.dataset.index * sliderItemWidth;
-      sliderList.style = `transform: translateX(${positionX}px)`;
-      [...controlItems].forEach((ele) =>
-        ele.classList.remove("slider__control-item--active")
-      );
-      e.target.classList.add("slider__control-item--active");
-    })
-  );
+  // handle Button
+  function handlePrevBnt() {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = sliderItems.length - 1;
+    }
+    showSlider();
+    showControl();
+  }
 
-  // auto
-  var autoNext = setInterval(function () {
-    handleBnt(1);
-  }, time);
+  function handleNextBnt() {
+    currentIndex++;
+    if (currentIndex >= sliderItems.length) {
+      currentIndex = 0;
+    }
+    showSlider();
+    showControl();
+  }
+  // handle control button
+  controlItems.forEach((control, index) => {
+    control.onclick = function () {
+      currentIndex = index;
+      showSlider();
+      showControl();
+    };
+  });
+
+  function showControl() {
+    $(".slider__control-item.active").classList.remove("active");
+
+    controlItems[currentIndex].classList.add("active");
+  }
+
+  setInterval(() => {
+    handleNextBnt();
+  }, 9000);
 }
 
 function handleSnow() {

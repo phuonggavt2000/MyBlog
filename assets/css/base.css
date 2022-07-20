@@ -64,7 +64,3 @@ body {
 .border-none {
   border: none !important;
 }
-
-.content__container.content__container--activity {
-  display: block;
-}
